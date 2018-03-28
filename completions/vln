@@ -12,7 +12,7 @@ _vln () {
             case $prev in
                 plug|replug|unplug)
                     local IFS=$'\n'
-                    COMPREPLY=( $(cd "$pluginsDir" && compgen -d -- "$word") ) ;;
+                    COMPREPLY=( $(cd "$pluginsDir" 2>/dev/null && compgen -d -- "$word") ) ;;
             esac
     esac
 }
