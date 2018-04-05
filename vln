@@ -8,6 +8,7 @@ declare -r  VIM_PLUGINS_DIR=${VIM_PLUGINS_DIR:-$HOME/Development/code/vim-plugin
 declare -ra STOWABLE_SUBDIRS=( after
                                autoload
                                colors
+                               ftplugin
                                plugin )
 
 usage() {
