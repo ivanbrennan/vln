@@ -12,14 +12,14 @@ declare -ra STOWABLE_SUBDIRS=( after
                                plugin )
 
 usage() {
-    local src=${BASH_SOURCE[0]} \
+    local cmd="vln" \
           subdirs="$(intercalate ',' ${STOWABLE_SUBDIRS[@]})"
 
     log 'Usage'
-    printf '  %s dotvim TARGET\t\t%ssymlink ~/.vim to %sTARGET\n' $src $(tput sitm) $(tput sgr0)
-    printf '  %s plug   NAME [-nv] \t%ssymlink {%s} to a local plugin %sNAME\n' $src $(tput sitm) "$subdirs" $(tput sgr0)
-    printf '  %s replug NAME [-nv] \t%srelink {%s} to a local plugin %sNAME\n' $src $(tput sitm) "$subdirs" $(tput sgr0)
-    printf '  %s unplug NAME [-nv] \t%sunlink {%s} from a local plugin %sNAME\n' $src $(tput sitm) "$subdirs" $(tput sgr0)
+    printf '  %s dotvim TARGET\t\t%ssymlink ~/.vim to %sTARGET\n' $cmd $(tput sitm) $(tput sgr0)
+    printf '  %s plug   NAME [-nv] \t%ssymlink {%s} to a local plugin %sNAME\n' $cmd $(tput sitm) "$subdirs" $(tput sgr0)
+    printf '  %s replug NAME [-nv] \t%srelink {%s} to a local plugin %sNAME\n' $cmd $(tput sitm) "$subdirs" $(tput sgr0)
+    printf '  %s unplug NAME [-nv] \t%sunlink {%s} from a local plugin %sNAME\n' $cmd $(tput sitm) "$subdirs" $(tput sgr0)
 }
 
 main() {
